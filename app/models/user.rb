@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   validates :email, :presence => true, :uniqueness => true
   validates :username, :presence => true, :uniqueness => true
   before_save :encrypt_password
+  after_save :send_welcome_message
 
   def encrypt_password
     self.password_salt = BCrypt::Engine.generate_salt
@@ -18,5 +19,9 @@ class User < ActiveRecord::Base
     else
       nil
     end
+  end
+
+  def send_welcome_message
+    UserMailer.signup_confirmation(self).deliver
   end
 end
