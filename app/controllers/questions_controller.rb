@@ -33,6 +33,16 @@ class QuestionsController < ApplicationController
     redirect_to questions_path
   end
 
+  def update
+    @question = Question.find(params[:id])
+    if @question.update!(question_params)
+      flash[:notice] = "Good job! Your question was updated!"
+      redirect_to question_path(@question)
+    else
+      render :edit
+    end
+  end
+
   private
   def question_params
     params.require(:question).permit(:question_title, :question_body)

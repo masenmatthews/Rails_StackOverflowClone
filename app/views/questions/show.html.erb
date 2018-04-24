@@ -1,11 +1,12 @@
 <div class="table">
   <div class="row header">
     <h2><%= @question.question_title %></h2>
+    <h4><%= @question.question_body %></h4>
   </div>
 
   <hr>
   <div class="row">
-    <h2>Question responses:</h2>
+    <h2>Answers:</h2>
     <% if @question.answers.any? %>
     <% @questions.each do |question| %>
     <div>
