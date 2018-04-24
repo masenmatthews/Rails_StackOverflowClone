@@ -5,7 +5,8 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-
+        <li><%= link_to "View Questions", questions_path %></li>
+        <li><%= link_to "Add Question", new_question_path %></li>
         <% if current_user %>
          <li><%= link_to "Sign out", '/signout' %></li>
          <li><%=link_to "Hi, #{current_user.username}", '/' %></li>

@@ -1,0 +1,11 @@
+<h2>Current Questions</h2>
+
+<% if @questions.any? %>
+  <ul>
+    <% @questions.each do |question| %>
+    <li><%= link_to question.question_title, question_path(question) %></li>
+    <% end %>
+  </ul>
+  <% else %>
+  <p>There are no questions yet!</p>
+  <% end %>
