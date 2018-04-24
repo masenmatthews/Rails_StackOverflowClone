@@ -8,7 +8,7 @@
   <div class="row">
     <h2>Answers:</h2>
     <% if @question.answers.any? %>
-    <% @questions.each do |question| %>
+    <% @answers.each do |answer| %>
     <div>
       <h3><%= answer.answer_body %></h3>
       <p><%= link_to "Edit", edit_question_answer_path(@question, answer) %> | <%= link_to "Delete", question_answer_path(@question, answer), :data => {
