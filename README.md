@@ -2,7 +2,7 @@
 
 #### _A simple Stack Overflow clone built with Ruby on Rails. {April 24, 2018}_
 
-#### By _Masen Matthews_
+#### By _Masen Matthews and Anna Marie Cooper_
 
 ## Description
   _This project is a simple Stack Overflow clone. It utilizes Devise for authentication and it lets users upload and respond to individual posts._
